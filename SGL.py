@@ -1,6 +1,5 @@
 import math
 import time
-import cvxpy as cp
 import numpy as np
 from utils import Laplacian_dual, Laplacian_inv, Laplacian
 
