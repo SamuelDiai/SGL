@@ -83,9 +83,9 @@ def blops(n, k, k_sgl):
     load_dataset_and_sgl('Blops', k, k_sgl, n)
 
 def circles(n, k_sgl):
-    """ Plot blops dataset and learn the graph using SGL
+    """ Plot Circles dataset and learn the graph using SGL
         n : number of nodes per cluster
         k_sgl : number of components to learn using SGL
     """
     # Create save path
-    load_dataset_and_sgl('Blops', 2, k_sgl, n)
+    load_dataset_and_sgl('Circles', 2, k_sgl, n)
