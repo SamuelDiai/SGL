@@ -17,7 +17,6 @@ def animals(k, n_iter, alpha, beta):
     #from sgll.sgl import LearnGraphTopolgy
     X = np.array(X_animals)
 
-    #SCM = np.dot((X - np.mean(X, axis = 0).reshape(1, -1)), (X - np.mean(X, axis = 0).reshape(1, -1)).T)
     SCM = np.dot(X, X.T) / X.shape[0]
     SCM = 1/3 * np.eye(SCM.shape[0]) + SCM
 
