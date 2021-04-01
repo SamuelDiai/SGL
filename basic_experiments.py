@@ -7,7 +7,7 @@ from .SGL import LearnGraphTopology
 plots_dir = './plots'
 if not os.path.exists(plots_dir):
     os.makedirs(plots_dir)
-    
+
 ## Experiments on basic datasets
 def load_dataset_and_sgl(dataset):
     """ Plot two moons dataset and learn the graph using SGL
@@ -28,7 +28,7 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
     if not os.path.exists(os.path.join(plots_dir, dataset)):
         os.makedirs(os.path.join(plots_dir, dataset))
     # Create dataset
-    if dataset == 'Two moons'
+    if dataset == 'Two moons':
         assert(k == 2)
         X, y = make_moons(n_samples=n*k, noise=.05, shuffle=True)
     elif dataset == 'Blops':
