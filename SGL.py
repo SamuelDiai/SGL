@@ -3,7 +3,7 @@ import time
 import cvxpy as cp
 from utils import Laplacian_dual, Laplacian_inv, Laplacian
 
-class LearnGraphTopolgy:
+class LearnGraphTopology:
     def __init__(self, S, alpha=0, beta=1e4, n_iter=10000, c1=0., c2=1e10, tol = 1e-6):
         self.tol = tol
         self.S = S
