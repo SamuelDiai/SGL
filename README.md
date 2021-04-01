@@ -1,7 +1,9 @@
-This repository contains the work of Paul Martin and Samuel Diai for the Project 6.8 of the Course "Time Series Learning" of Laurent Oudre.
+## Structured Graph Learning via Laplacian Spectral Constraints for Timeseries
+
+This repository contains the work of **Paul Martin** and **Samuel Diai** for the Project 6.8 of the Course "Time Series Learning" of Laurent Oudre.
 On this project, we studied a novel approach to learn a structured Graph with Laplacian constraints.
-The work is adapted from the article "Structured Graph Learning via Laplacian Spectral
-Constraints" of Sandeep Kumar, Jiaxi Ying, Jose Vinicius de M. Cardoso and Daniel P. Palomar.
+The work is adapted from the article **"Structured Graph Learning via Laplacian Spectral
+Constraints"** of Sandeep Kumar, Jiaxi Ying, Jose Vinicius de M. Cardoso and Daniel P. Palomar.
 
 ![alt text](https://github.com/SamuelDiai/SGL/blob/master/timeseries_graph.gif "Logo Title Text 1")
 
