@@ -2,7 +2,7 @@
 
 This repository contains the work of **Paul Martin** and **Samuel Diai** for the Project 6.8 of the Course "Time Series Learning" of Laurent Oudre.
 
-On this project, we studied a novel approach to learn a structured Graph with Laplacian constraints.
+In this project, we studied a novel approach to learn a structured Graph with Laplacian constraints.
 
 Our work is directly adapted from the article **"Structured Graph Learning via Laplacian Spectral
 Constraints"** of Sandeep Kumar, Jiaxi Ying, Jose Vinicius de M. Cardoso and Daniel P. Palomar.
