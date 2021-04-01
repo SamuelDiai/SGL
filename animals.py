@@ -9,7 +9,7 @@ if not os.path.exists(plots_dir):
     os.makedirs(plots_dir)
 
 def animals(k, n_iter, alpha, beta):
-    print(os.listdir(), os.pwd())
+    print(os.listdir(), os.getcwd())
     X_animals = np.load('data/animals_data.npy')
     animals_names = np.load('data/animals_name.npy')
     animals_features = np.load('data/animals_features.npy')
