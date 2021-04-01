@@ -32,7 +32,7 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
         assert(k == 2)
         X, y = make_moons(n_samples=n*k, noise=.05, shuffle=True)
     elif dataset == 'Blops':
-        X, y = make_blobs(n_samples=n*k, centers=k, n_features=2, random_state=0)
+        X, y = make_blobs(n_samples=n*k, centers=k, n_features=2, random_state=0, cluster_std=0.6)
     else :
         raise ValueError('%s is not a valid dataset ' % dataset)
     # dict to store position of nodes
@@ -67,7 +67,7 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
     plt.suptitle('SGL components k_sgl=%s, Real components k=%s' % (k_sgl, k))
     plt.xlabel('x-coordinate')
     plt.ylabel('y-coordinate')
-    filename = os.path.join(plots_dir, dataset, 'graph_%s_%s' % (k , k_sgl, n))
+    filename = os.path.join(plots_dir, dataset, 'graph_%s_%s_%s' % (k , k_sgl, n))
     fig.savefig(filename)
 
 
