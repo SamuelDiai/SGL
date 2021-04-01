@@ -57,7 +57,7 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
     norm_weights = norm_weights
 
     # plot graph
-    fig = plt.figure(figsize=(15,15))
+    fig = plt.figure(figsize=(10,10))
     nx.draw_networkx(G,pos, width=norm_weights)
     plt.title("Learned graph for %s dataset" % dataset)
     plt.suptitle('SGL components k_sgl=%s, Real components k=%s' % (k_sgl, k))
