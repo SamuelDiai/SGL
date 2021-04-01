@@ -11,3 +11,5 @@ The repository contains :
 * A notebook where we do the above experiments and plot the results.
 * A notebook (SGL_timeseries.ipynb) where we apply the SGL algorithm to timeseries data. It is directly adapted from the assignment n°6 of the course "Time Series Learning" by Charles Truong.
 * The final report of our project.
+
+![alt text](https://github.com/SamuelDiai/SGL/blob/master/timeseries_graph.gif "Logo Title Text 1")
