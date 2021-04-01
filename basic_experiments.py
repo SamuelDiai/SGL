@@ -2,22 +2,13 @@ import os
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
-from sklearn.datasets import make_moons, make_blobs
+from sklearn.datasets import make_moons, make_blobs, make_circles
 from .SGL import LearnGraphTopology
 plots_dir = './plots'
 if not os.path.exists(plots_dir):
     os.makedirs(plots_dir)
 
 ## Experiments on basic datasets
-def load_dataset_and_sgl(dataset):
-    """ Plot two moons dataset and learn the graph using SGL
-    n : number of nodes per cluster
-    k : number of components"""
-    # Create save path
-    if not os.path.exists(os.path.join(plots_dir, dataset)):
-        os.makedirs(os.path.join(plots_dir, dataset))
-    # Create dataset
-
 def load_dataset_and_sgl(dataset, k, k_sgl, n):
     """ Plot two moons dataset and learn the graph using SGL
         n : number of nodes per cluster
@@ -33,6 +24,8 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
         X, y = make_moons(n_samples=n*k, noise=.05, shuffle=True)
     elif dataset == 'Blops':
         X, y = make_blobs(n_samples=n*k, centers=k, n_features=2, random_state=0, cluster_std=0.6)
+    elif dataset == 'Circles':
+        X, y = make_circles(n_samples=n)
     else :
         raise ValueError('%s is not a valid dataset ' % dataset)
     # dict to store position of nodes
@@ -73,15 +66,26 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
 
 def two_moons(n, k_sgl):
     """ Plot two moons dataset and learn the graph using SGL
-    n : number of nodes per cluster
-    k : number of components"""
+        n : number of nodes per cluster
+        k_sgl : number of components to learn using SGL
+    """
     # Create save path
     load_dataset_and_sgl('Two moons', 2, k_sgl, n)
 
 
 def blops(n, k, k_sgl):
     """ Plot blops dataset and learn the graph using SGL
-    n : number of nodes per cluster
-    k : number of components"""
+        n : number of nodes per cluster
+        k : number of components to generate in the datasets
+        k_sgl : number of components to learn using SGL
+    """
     # Create save path
     load_dataset_and_sgl('Blops', k, k_sgl, n)
+
+def circles(n, k_sgl):
+    """ Plot blops dataset and learn the graph using SGL
+        n : number of nodes per cluster
+        k_sgl : number of components to learn using SGL
+    """
+    # Create save path
+    load_dataset_and_sgl('Blops', 2, k_sgl, n)
