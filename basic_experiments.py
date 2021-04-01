@@ -76,7 +76,7 @@ def two_moons(n, k_sgl):
     n : number of nodes per cluster
     k : number of components"""
     # Create save path
-    load_dataset_and_sgl('Two moons', 2, k_slg, n)
+    load_dataset_and_sgl('Two moons', 2, k_sgl, n)
 
 
 def blops(n, k, k_sgl):
