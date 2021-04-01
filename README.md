@@ -6,8 +6,8 @@ Constraints" of Sandeep Kumar, Jiaxi Ying, Jose Vinicius de M. Cardoso and Danie
 The repository contains : 
 * The code of the Structured Graph Learning algorithm (SGL)
 * Some tests made on very simple datasets (two moons, circles and blops) - basic_experiments.py
-* An experiment on an animal dataset - animals..py
+* An experiment on an animal dataset - animals.py
 * An experiment on a cancer genome dataset - cancer.py
 * A notebook where we do the above experiments and plot the results.
-* A notebook where we apply the SGL algorithm to timeseries data. It is directly adapted from the assignment n°6 of the course "Time Series Learning" by Charles Truong.
+* A notebook (SGL_timeseries.ipynb) where we apply the SGL algorithm to timeseries data. It is directly adapted from the assignment n°6 of the course "Time Series Learning" by Charles Truong.
 * The final report of our project.
