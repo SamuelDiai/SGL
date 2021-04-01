@@ -37,3 +37,4 @@ def animals(k, n_iter, alpha, beta):
     plt.title("Learned graph for the animal dataset k=%s n_iter=%s alpha=%.3f beta=%.3f" % (k , n_iter, alpha, beta))
     filename = os.path.join(plots_dir, 'animals', 'graph')
     fig.savefig(filename)
+    return G

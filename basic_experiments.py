@@ -65,6 +65,7 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
     plt.ylabel('y-coordinate')
     filename = os.path.join(plots_dir, dataset, 'graph_%s_%s_%s' % (k , k_sgl, n))
     fig.savefig(filename)
+    return G
 
 
 def two_moons(n, k_sgl):
@@ -73,7 +74,7 @@ def two_moons(n, k_sgl):
         k_sgl : number of components to learn using SGL
     """
     # Create save path
-    load_dataset_and_sgl('Two moons', 2, k_sgl, n)
+    return load_dataset_and_sgl('Two moons', 2, k_sgl, n)
 
 
 def blops(n, k, k_sgl):
@@ -83,7 +84,7 @@ def blops(n, k, k_sgl):
         k_sgl : number of components to learn using SGL
     """
     # Create save path
-    load_dataset_and_sgl('Blops', k, k_sgl, n)
+    return load_dataset_and_sgl('Blops', k, k_sgl, n)
 
 def circles(n, k_sgl):
     """ Plot Circles dataset and learn the graph using SGL
@@ -91,4 +92,4 @@ def circles(n, k_sgl):
         k_sgl : number of components to learn using SGL
     """
     # Create save path
-    load_dataset_and_sgl('Circles', 2, k_sgl, n)
+    return load_dataset_and_sgl('Circles', 2, k_sgl, n)
