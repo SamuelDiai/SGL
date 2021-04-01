@@ -3,7 +3,7 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_moons, make_blobs, make_circles
-from SGL import LearnGraphTopology
+from .SGL import LearnGraphTopology
 plots_dir = './plots'
 if not os.path.exists(plots_dir):
     os.makedirs(plots_dir)

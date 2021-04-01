@@ -3,15 +3,15 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_moons, make_blobs
-from SGL import LearnGraphTopology
+from .SGL import LearnGraphTopology
 plots_dir = './plots'
 if not os.path.exists(plots_dir):
     os.makedirs(plots_dir)
 
 def animals(k, n_iter, alpha, beta):
-    X_animals = np.load('./data/animals_data.npy')
-    animals_names = np.load('./data/animals_name.npy')
-    animals_features = np.load('./data/animals_features.npy')
+    X_animals = np.load('data/animals_data.npy')
+    animals_names = np.load('data/animals_name.npy')
+    animals_features = np.load('data/animals_features.npy')
     #from sgll.sgl import LearnGraphTopolgy
     X = np.array(X_animals)
 
