@@ -9,7 +9,6 @@ if not os.path.exists(plots_dir):
     os.makedirs(plots_dir)
 
 def animals(k, n_iter, alpha, beta):
-    print(os.listdir(), os.getcwd())
     X_animals = np.load('data/animals_data.npy')
     animals_names = np.load('data/animals_name.npy')
     animals_features = np.load('data/animals_features.npy')
@@ -21,8 +20,8 @@ def animals(k, n_iter, alpha, beta):
     SCM = 1/3 * np.eye(SCM.shape[0]) + SCM
 
     # estimate underlying graph
-    sgl = LearnGraphTopolgy(SCM, n_iter=n_iter, alpha=alpha, beta = beta)
-    graph = sgl.learn_k_component_graph(k=k)
+    sgl = LearnGraphTopology(SCM, n_iter=n_iter, alpha=alpha, beta = beta)
+    graph = sgl.learn_graph(k=k)
 
     A = graph['adjacency']
     G = nx.from_numpy_matrix(A)
