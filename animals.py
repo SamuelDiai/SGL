@@ -3,12 +3,14 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_moons, make_blobs
-from .SGL import LearnGraphTopology
+from SGL import LearnGraphTopology
 plots_dir = './plots'
 if not os.path.exists(plots_dir):
     os.makedirs(plots_dir)
 
 def animals(k, n_iter, alpha, beta):
+    if not os.path.exists(os.path.join(plots_dir, 'animals')):
+        os.makedirs(os.path.join(plots_dir, 'animals'))
     X_animals = np.load('data/animals_data.npy')
     animals_names = np.load('data/animals_name.npy')
     animals_features = np.load('data/animals_features.npy')
@@ -33,6 +35,6 @@ def animals(k, n_iter, alpha, beta):
     G = nx.relabel_nodes(G, mapping)
     fig = plt.figure(figsize=(15,15))
     nx.draw(G, with_labels=True, font_weight='bold')
-    plt.title("Learned graph for the animal dataset" % dataset)
-    filename = os.path.join(plots_dir, 'animals', 'graph_%s_%s_%.3f_%.3f' % (k , n_iter, alpha, beta))
+    plt.title("Learned graph for the animal dataset k=%s n_iter=%s alpha=%.3f beta=%.3f" % (k , n_iter, alpha, beta))
+    filename = os.path.join(plots_dir, 'animals', 'graph')
     fig.savefig(filename)
