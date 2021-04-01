@@ -102,35 +102,32 @@ class LearnGraphTopolgy:
         # find an appropriate inital guess
         Sinv = np.linalg.pinv(self.S)
         # if w0 is either "naive" or "qp", compute it, else return w0
-        w0 = self.w_init(w0_init, Sinv)
+        w = self.w_init(w0_init, Sinv)
         # compute quantities on the initial guess
-        Lw0 = Laplacian(w0, self.p)
+        Lw = Laplacian(w, self.p)
         # l1-norm penalty factor
         H = self.alpha * (np.eye(self.p) - np.ones((self.p, self.p)))
         K = self.S + H
-        U0 = self.update_U(Lw = Lw0, k = k)
-        lambda_0 = self.update_lambda(U = U0, Lw = Lw0, k = k)
+        U = self.update_U(Lw = Lw, k = k)
+        lambda_ = self.update_lambda(U = U, Lw = Lw, k = k)
 
         objective_seq = []
 
         for _ in range(self.n_iter):
-            w = self.update_w(w = w0, Lw = Lw0, U = U0, lambda_ = lambda_0, K = K)
-            Lw = Laplacian(w, self.p)
+            w_new = self.update_w(w = w, Lw = Lw, U = U, lambda_ = lambda_, K = K)
+            Lw = Laplacian(w_new, self.p)
             U = self.update_U(Lw = Lw, k = k)
             lambda_ = self.update_lambda(U = U, Lw = Lw, k = k)
 
             # check for convergence
-            convergence = np.linalg.norm(w0 - w, ord=2) < self.tol
+            convergence = np.linalg.norm(w_new - w, ord=2) < self.tol
             objective_seq.append(self.objective(Lw, lambda_, K, U))
 
             if convergence:
                 break
 
             # update estimates
-            w0 = w
-            U0 = U
-            lambda_0 = lambda_
-            Lw0 = Lw
+            w = w_new
             K = self.S + H / (-Lw + eps)
 
         # compute the adjancency matrix
