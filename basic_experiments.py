@@ -65,7 +65,7 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
     plt.ylabel('y-coordinate')
     filename = os.path.join(plots_dir, dataset, 'graph_%s_%s_%s' % (k , k_sgl, n))
     fig.savefig(filename)
-    return G
+    return graph
 
 
 def two_moons(n, k_sgl):

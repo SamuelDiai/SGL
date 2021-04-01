@@ -37,4 +37,4 @@ def Cancer(df_cancer, y_cancer, alpha, beta, k, n_iter):
     plt.title("Learned graph for the cancer dataset k=%s n_iter=%s alpha=%.3f beta=%.3f" % (k , n_iter, alpha, beta))
     filename = os.path.join(plots_dir, 'cancer', 'graph')
     fig.savefig(filename)
-    return G
+    return graph
