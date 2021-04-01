@@ -27,7 +27,7 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
         X, y = make_blobs(n_samples=n*k, centers=k, n_features=2, random_state=0, cluster_std=0.6)
         n_points = n*k
     elif dataset == 'Circles':
-        X, y = make_circles(n_samples=n)
+        X, y = make_circles(n_samples=n, factor=.5)
         n_points = n
     else :
         raise ValueError('%s is not a valid dataset ' % dataset)
