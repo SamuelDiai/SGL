@@ -64,10 +64,10 @@ def load_dataset_and_sgl(dataset, k, k_sgl, n):
     fig = plt.figure(figsize=(15,15))
     nx.draw_networkx(G,pos, width=norm_weights)
     plt.title("Learned graph for %s dataset" % dataset)
-    plt.suptitle('SGL components k_slg=%s, Real components k=%s' % (k_sgl, k))
+    plt.suptitle('SGL components k_sgl=%s, Real components k=%s' % (k_sgl, k))
     plt.xlabel('x-coordinate')
     plt.ylabel('y-coordinate')
-    filename = os.path.join(plots_dir, dataset, 'graph_%s_%s' % (k , k_slg, n))
+    filename = os.path.join(plots_dir, dataset, 'graph_%s_%s' % (k , k_sgl, n))
     fig.savefig(filename)
 
 
