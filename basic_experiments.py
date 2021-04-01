@@ -13,7 +13,7 @@ if not os.path.exists(plots_dir):
 '''
 
 def two_moons(n, k):
-""" Plot two moons dataset and learn the graph using SGL
+    """ Plot two moons dataset and learn the graph using SGL
     n : number of nodes per cluster
     k : number of components"""
     # Create save path
