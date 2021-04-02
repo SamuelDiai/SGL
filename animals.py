@@ -40,7 +40,7 @@ def animals(k, n_iter, alpha, beta):
         mapping[i] = animals_names[i, 0]
 
     G = nx.relabel_nodes(G, mapping)
-    fig = plt.figure(figsize=(10,10))
+    fig = plt.figure(figsize=(12,12))
     nx.draw(G, with_labels=True, font_weight='bold', width=norm_weights)
     plt.title("Learned graph for the animal dataset k=%s n_iter=%s alpha=%.3f beta=%.3f" % (k , n_iter, alpha, beta))
     filename = os.path.join(plots_dir, 'animals', 'graph')
